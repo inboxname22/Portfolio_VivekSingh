@@ -1,0 +1,46 @@
+{
+  "name": "Vivek Singh",
+  "title": "RPA Business Analyst | Process Automation Specialist | Power Automate & VBA Expert",
+  "intro": "Turning complex business processes into practical automated solutions with Power Platform, VBA, and thoughtful process design.",
+  "summary": "Process Automation Specialist and RPA Business Analyst with 13+ years of experience across banking, BPO, finance, and HRSS operations. Deep expertise in Power Automate, Power Apps, VBA Macros, and SharePoint-based workflow automation. Skilled at translating business requirements into working automated solutions — with end-to-end tools delivered independently from requirements gathering through to deployment and user training. Recently architected the HRSS Command Center — a Power Apps portal integrating Power Automate and SharePoint Lists to orchestrate full HR Shared Services delivery for clients. Lean Six Sigma certified.",
+  "email": "inboxname22@gmail.com",
+  "phone": "+91 9911282334",
+  "location": "Noida, Delhi NCR",
+  "projects": [
+    {
+      "name": "HRSS Command Center",
+      "tech": "Power Apps · Power Automate · SharePoint Lists",
+      "description": "Centralised HR Shared Services hub with phase-wise task checklists, real-time tracking, automated notifications and escalation flows."
+    },
+    {
+      "name": "Onboarding Automation Tool",
+      "tech": "VBA · Outlook · Excel · Word",
+      "description": "Full-cycle new hire automation: form data capture, email consolidation, MD-level distribution and automated offer-letter generation and delivery. Cut processing time from days to hours."
+    },
+    {
+      "name": "HR Query Tracker",
+      "tech": "SharePoint Lists · Power Automate",
+      "description": "Real-time ticket tracking and SLA notifications for client HR queries."
+    },
+    {
+      "name": "ASR Tool (Assessment & Review)",
+      "tech": "VBA · Excel",
+      "description": "Digital manager appraisal form replacing a paper process, with automated routing to HR administration."
+    },
+    {
+      "name": "CONSOLD ASR Tool",
+      "tech": "VBA · Outlook",
+      "description": "Collects appraisal submission emails, consolidates data and delivers a structured file to HR without manual intervention."
+    },
+    {
+      "name": "ARD Tool (Appraisal Report Distribution)",
+      "tech": "VBA · Outlook",
+      "description": "HR-triggered batch appraisal report distribution to HOD-level users without manual email drafting."
+    },
+    {
+      "name": "Data Compiler Tool",
+      "tech": "VBA · Excel",
+      "description": "Aggregates files from 10+ network locations into a master dataset, replacing a 2-hour daily manual task."
+    }
+  ]
+}
