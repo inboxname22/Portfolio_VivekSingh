@@ -1,5 +1,5 @@
 // PUBLIC DEMO PASSWORD. This is a convenience gate, NOT secure authentication.
-const ADMIN_PASSWORD = 'Vivek@Portfolio2026';
+const ADMIN_PASSWORD = 'vk?26';
 const $=id=>document.getElementById(id),KEY='vivek-static-portfolio-v1';let D,published,unlocked=false,editing=-1;
 const fields=['name','title','intro','summary','email','phone','location'];
 function valid(x){return x&&fields.every(k=>typeof x[k]==='string'&&x[k].length<=20000)&&Array.isArray(x.projects)&&x.projects.length<=200&&x.projects.every(p=>p&&['name','tech','description'].every(k=>typeof p[k]==='string'&&p[k].length<=20000))}
