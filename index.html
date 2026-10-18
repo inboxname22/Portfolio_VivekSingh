@@ -1,1 +1,146 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vivek Singh | Portfolio</title><meta name="description" content="Vivek Singh — process automation and business analysis portfolio."><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><main id="main"><section id="entry" class="entry"><h1 id="heroName">Vivek Singh</h1><p id="heroTitle" class="title"></p><p id="heroIntro" class="intro"></p><div class="choices"><button id="userEntry" class="choice"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="20" r="10"/><path d="M12 56v-7c0-11 9-17 20-17s20 6 20 17v7"/></svg><span>User</span></button><button id="adminEntry" class="choice"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="19" r="9"/><path d="M8 54v-6c0-10 8-16 19-16 5 0 9 1 12 4M47 32l12 5v10c0 8-12 14-12 14S35 55 35 47V37z"/><path d="m41 46 4 4 8-9"/></svg><span>Admin</span></button></div></section><section id="login" class="login" hidden><button class="home">← Home</button><h2>Admin login</h2><p class="small">Basic local editor only. The JavaScript password is public, not secure authentication.</p><form id="loginForm"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><button type="submit">Open editor →</button></form><p id="loginMessage" role="status"></p></section><section id="viewer" hidden><button class="home">← Home</button><h2 id="viewerName"></h2><nav aria-label="Portfolio navigation"><button data-tab="portfolio">Portfolio</button><button data-tab="projects">Projects</button><button data-tab="resume">Résumé</button></nav><section id="portfolio"><span class="eyebrow">Professional overview</span><h2>Career summary</h2><p id="viewerTitle"></p><p id="viewerSummary"></p><div id="contact" class="contact"></div></section><section id="projects" hidden><h2>Projects</h2><div class="filters"><input id="search" type="search" placeholder="Search projects…" aria-label="Search projects"><select id="filter" aria-label="Filter projects by technology"></select></div><p id="count" role="status" aria-live="polite"></p><div id="cards" class="grid"></div></section><section id="resume" hidden><h2>Original résumé</h2><p>The original PDF is preserved unchanged.</p><div class="actions"><a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Open PDF / Zoom ↗</a><a class="btn" href="assets/resume.pdf" download="Vivek_Singh_Resume.pdf">Download PDF ↓</a></div><p class="small">If the preview does not display, use Open PDF or Download PDF.</p><iframe id="pdfPreview" title="Original résumé"></iframe></section></section><section id="admin" hidden><button class="home">Lock editor / Home</button><h2>Admin editor</h2><p class="notice">GitHub Pages is static. Save keeps a draft in this browser only. To publish: download data.json, then replace the repository’s data.json and commit. All uploaded repository files are public.</p><div class="actions"><button id="save">Save browser draft</button><button id="export">Download updated data.json</button><button id="importButton">Import JSON</button><input id="importFile" type="file" accept=".json" hidden><button id="reset">Reset to published data</button></div><div class="grid"><section><h3>Profile</h3><label for="name">Name</label><input id="name"><label for="title">Title</label><input id="title"><label for="intro">Short introduction</label><textarea id="intro"></textarea><label for="summary">Career summary</label><textarea id="summary" rows="8"></textarea><label for="email">Email</label><input id="email" type="email"><label for="phone">Phone</label><input id="phone"><label for="location">Location</label><input id="location"><h3>Résumé</h3><p>To replace the public résumé, upload your new PDF to assets/resume.pdf on GitHub. Keep the same filename.</p><a class="btn" href="assets/resume.pdf" download>Download current PDF</a><p class="small">Private Word storage is not included: files in this public repository cannot be admin-only.</p></section><section><h3>Projects</h3><div id="projectList"></div><h3 id="editHeading">Add project</h3><label for="projectName">Project title</label><input id="projectName"><label for="projectTech">Technologies (separate with ·)</label><input id="projectTech"><label for="projectDescription">Description</label><textarea id="projectDescription"></textarea><div class="actions"><button id="apply">Apply project</button><button id="cancel">Cancel</button></div></section></div></section><p id="status" role="status" aria-live="polite"></p></main><footer>Vivek Singh · Portfolio / Projects / Résumé</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vivek Singh — process automation, VBA, Power Platform and business automation portfolio.">
+  <title>Vivek Singh | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <main id="main">
+    <section id="entry" class="entry">
+      <div class="landing-grid">
+        <section class="ai-panel" aria-labelledby="aiTitle">
+          <div class="ai-topline"><span class="status-dot"></span> YOUR PORTFOLIO GUIDE</div>
+          <h2 id="aiTitle">Meet <span>VK AI</span></h2>
+          <p class="ai-subtitle">Your guide to Vivek's work</p>
+
+          <!-- CSS-built character: no external image/API dependency -->
+          <div class="character-stage" role="img" aria-label="Animated 3D-style character wearing a charcoal hoodie">
+            <div class="character-shadow"></div>
+            <div class="character" id="character">
+              <div class="hair-back"></div>
+              <div class="neck"></div>
+              <div class="hoodie"><span class="zipper"></span><span class="hoodie-seam"></span></div>
+              <div class="head">
+                <div class="hair"></div>
+                <div class="ear ear-left"></div><div class="ear ear-right"></div>
+                <div class="brow brow-left"></div><div class="brow brow-right"></div>
+                <div class="eye eye-left"><i></i></div><div class="eye eye-right"><i></i></div>
+                <div class="nose"></div><div class="face-shade"></div>
+                <div class="mouth"><span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="speech-card">
+            <span class="speech-label">VK AI SAYS</span>
+            <p id="aiCaption" aria-live="polite">Hi, my name is VK AI, and I'm here to introduce Vivek Singh.</p>
+          </div>
+          <div class="voice-controls">
+            <button id="playVoice" class="primary-button" type="button">▶ Play / Replay</button>
+            <button id="stopVoice" class="secondary-button" type="button">■ Stop voice</button>
+          </div>
+          <p class="voice-note" id="voiceStatus">Uses the English voice available in your browser.</p>
+        </section>
+
+        <section class="profile-panel" aria-labelledby="heroName">
+          <div class="profile-heading">
+            <div class="profile-photo" aria-label="Profile photo placeholder"><span>VS</span></div>
+            <div class="profile-heading-copy">
+              <span class="eyebrow">PROCESS AUTOMATION · BUSINESS ANALYSIS</span>
+              <h1 id="heroName">Vivek Singh</h1>
+              <p id="heroTitle" class="title"></p>
+            </div>
+          </div>
+          <p id="heroIntro" class="intro"></p>
+          <div class="experience-strip">
+            <div><strong>13+</strong><span>Years experience</span></div>
+            <div><strong>VBA</strong><span>Automation</span></div>
+            <div><strong>Power</strong><span>Platform</span></div>
+          </div>
+          <div class="profile-actions">
+            <button id="userEntry" class="primary-button" type="button">Explore portfolio ↗</button>
+            <a class="secondary-button" href="assets/resume.pdf" download="Vivek_Singh_Resume.pdf">Download résumé ↓</a>
+          </div>
+          <div class="quick-links">
+            <a href="mailto:inboxname22@gmail.com">Email Vivek</a><span>·</span>
+            <span id="heroLocation">Noida, Delhi NCR</span><span class="quick-spacer"></span>
+            <button id="adminEntry" type="button" class="admin-link">Admin login</button>
+          </div>
+          <div class="featured-projects">
+            <div class="section-heading"><span class="eyebrow">SELECTED WORK</span><button id="projectsEntry" class="text-link" type="button">All projects ↗</button></div>
+            <div id="featuredProjects" class="featured-list"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="login" class="login" hidden>
+      <button class="home" type="button">← Home</button>
+      <h2>Admin login</h2>
+      <p class="small">This is a basic client-side editor gate, not secure authentication. Do not store secrets here.</p>
+      <form id="loginForm"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required><button type="submit">Open editor →</button></form>
+      <p id="loginMessage" role="status"></p>
+    </section>
+
+    <section id="viewer" hidden>
+      <button class="home" type="button">← Home</button>
+      <h2 id="viewerName"></h2>
+      <nav aria-label="Portfolio navigation">
+        <button data-tab="portfolio" type="button">Portfolio</button>
+        <button data-tab="projects" type="button">Projects</button>
+        <button data-tab="resume" type="button">Résumé</button>
+      </nav>
+      <section id="portfolio">
+        <span class="eyebrow">Professional overview</span><h2>Career summary</h2>
+        <p id="viewerTitle"></p><p id="viewerSummary"></p><div id="contact" class="contact"></div>
+      </section>
+      <section id="projects" hidden>
+        <h2>Projects</h2>
+        <div class="filters"><input id="search" type="search" placeholder="Search projects…" aria-label="Search projects"><select id="filter" aria-label="Filter projects by technology"></select></div>
+        <p id="count" role="status" aria-live="polite"></p><div id="cards" class="grid"></div>
+      </section>
+      <section id="resume" hidden>
+        <h2>Original résumé</h2><p>The existing PDF résumé is linked below.</p>
+        <div class="actions"><a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Open PDF / Zoom ↗</a><a class="btn" href="assets/resume.pdf" download="Vivek_Singh_Resume.pdf">Download PDF ↓</a></div>
+        <p class="small">If the preview does not display, use Open PDF or Download PDF.</p><iframe id="pdfPreview" title="Résumé PDF preview"></iframe>
+      </section>
+    </section>
+
+    <section id="admin" hidden>
+      <button class="home" type="button">Lock editor / Home</button>
+      <h2>Admin editor</h2>
+      <p class="notice">GitHub Pages is static. Save keeps a draft in this browser only. To publish edits, download data.json, replace the repository's data.json, and commit it. Files uploaded to this public repository are public.</p>
+      <div class="actions"><button id="save" type="button">Save browser draft</button><button id="export" type="button">Download updated data.json</button><button id="importButton" type="button">Import JSON</button><input id="importFile" type="file" accept=".json,application/json" hidden><button id="reset" type="button">Reset to published data</button></div>
+      <div class="grid">
+        <section class="card">
+          <h3>Profile</h3>
+          <label for="name">Name</label><input id="name">
+          <label for="title">Professional title</label><input id="title">
+          <label for="intro">Short introduction</label><textarea id="intro"></textarea>
+          <label for="summary">Career summary</label><textarea id="summary" rows="8"></textarea>
+          <label for="email">Email</label><input id="email" type="email">
+          <label for="phone">Phone</label><input id="phone">
+          <label for="location">Location</label><input id="location">
+          <h3>Résumé</h3><p>To replace the public résumé, upload a new PDF to assets/resume.pdf on GitHub and keep the same filename.</p>
+          <a class="btn" href="assets/resume.pdf" download>Download current PDF</a>
+        </section>
+        <section class="card">
+          <h3>Projects</h3><div id="projectList"></div>
+          <h3 id="editHeading">Add project</h3>
+          <label for="projectName">Project title</label><input id="projectName">
+          <label for="projectTech">Technologies (separate with ·)</label><input id="projectTech">
+          <label for="projectDescription">Description</label><textarea id="projectDescription"></textarea>
+          <div class="actions"><button id="apply" type="button">Apply project</button><button id="cancel" type="button">Cancel</button></div>
+        </section>
+      </div>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+  <footer>Vivek Singh · Portfolio / Projects / Résumé</footer>
+</body>
+</html>
